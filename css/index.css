@@ -13,7 +13,13 @@ body {
     background-color: #1f1f44;
     border-radius: 8px;
     overflow: hidden;
-    text-align: center; 
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    background-color: #333399; 
+    transform: scale(1.05); 
 }
 
 .card h2 {
@@ -28,6 +34,11 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); 
 }
 
 .card .content {
@@ -38,4 +49,3 @@ body {
 .card p {
     margin: 10px 0;
 }
-
