@@ -6,6 +6,14 @@ body {
     align-items: center;
     height: 1000px;
     margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
 }
 
 .card {
@@ -15,7 +23,7 @@ body {
     overflow: hidden;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    
+    margin: 0 10px; 
 }
 
 .card:hover {
@@ -59,14 +67,9 @@ body {
 }
 
 .qualities .card {
-    width: calc(33.33% - 20px); 
-    background-color: #461b77;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: calc(33.33% - 20px);
 }
+
 
 .qualities .card:hover {
     background-color: #3f0052;
@@ -143,4 +146,17 @@ nav a:hover {
     color: #a200ff;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; 
+    }
 
+    .card {
+        width: 100%; 
+        margin: 0 0 20px 0; 
+
+    .qualities .card {
+        width: calc(50% - 10px); 
+    }
+}
+}
