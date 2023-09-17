@@ -6,6 +6,14 @@ body {
     align-items: center;
     height: 1000px;
     margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
 }
 
 .card {
@@ -15,7 +23,7 @@ body {
     overflow: hidden;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    
+    margin: 0 10px; 
 }
 
 .card:hover {
@@ -59,14 +67,9 @@ body {
 }
 
 .qualities .card {
-    width: calc(33.33% - 20px); 
-    background-color: #461b77;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: calc(33.33% - 20px);
 }
+
 
 .qualities .card:hover {
     background-color: #3f0052;
@@ -93,12 +96,67 @@ body {
 }
 
 .qualities-container {
-    text-align: center; /* Centralize o conteúdo horizontalmente */
-    margin-top: 20px; /* Espaçamento superior */
+    text-align: center; 
+    margin-top: 20px; 
     color: #ffffff;
 }
 
 .qualities-title {
     font-size: 1.5rem;
     margin: 0;
+}
+
+header {
+    background-color: #461b77;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a200ff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; 
+    }
+
+    .card {
+        width: 100%; 
+        margin: 0 0 20px 0; 
+
+    .qualities .card {
+        width: calc(50% - 10px); 
+    }
+}
 }
